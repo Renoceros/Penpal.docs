@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Penpal</title>
+  <meta name="description" content="Penpal Privacy Policy: 100% on-device, zero-video, zero-analytics, and zero-cloud data collection. Your creative input stays strictly between your iPad and your Mac.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖊️</text></svg>">
+</head>
+<body class="theme-pitch-black">
+
+  <!-- Background Ambience Glow -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <span class="brand-icon">🖊️</span>
+        <span class="brand-name">Penpal</span>
+        <span class="brand-badge">Legal</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how-it-works">Architecture</a>
+        <a href="index.html#simulator">Live Demo</a>
+        <a href="index.html#install">Installation</a>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="https://github.com/Renoceros/Penpal" class="btn btn-secondary btn-sm" target="_blank" rel="noopener">
+          <svg class="icon-github" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <a href="index.html" class="btn btn-primary btn-sm">Back to Home</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="legal-main">
+    <div class="legal-container">
+      
+      <header class="legal-header">
+        <div class="legal-meta">
+          <span class="legal-tag">Privacy Policy</span>
+          <span class="legal-date">Last Updated: September 14, 2026</span>
+        </div>
+        <h1 class="legal-title">Penpal Privacy Policy</h1>
+        <p class="legal-summary">
+          Penpal is built on an uncompromising privacy foundation: <strong>we do not collect, store, track, sell, or transmit your personal data</strong>. Everything you draw, tap, or configure stays 100% on your personal hardware.
+        </p>
+      </header>
+
+      <article class="legal-card">
+        
+        <!-- Summary Callout -->
+        <div class="highlight-box green">
+          <p>
+            <strong>Summary in Plain English:</strong> Penpal is an offline, zero-video stylus digitizer tool. We don't have user accounts, cloud databases, tracking cookies, or analytics SDKs. Stylus pressure, coordinates, and gestures are transmitted over your local physical USB cable or direct peer-to-peer connection directly into macOS event taps and discarded immediately from RAM.
+          </p>
+        </div>
+
+        <!-- Section 1 -->
+        <section class="legal-section">
+          <h2>1. Information We Do Not Collect</h2>
+          <p>
+            Penpal is engineered specifically to avoid collecting any user information. We believe software utility should not come at the expense of privacy.
+          </p>
+          <ul>
+            <li><strong>No Personal Identification:</strong> We never ask for or collect names, email addresses, phone numbers, account credentials, or physical addresses.</li>
+            <li><strong>No Screen or Artwork Content:</strong> Penpal is a zero-video digitizer. The app does not capture your screen, read your canvas pixels, record camera input, or record your artwork.</li>
+            <li><strong>No Audio or Microphone Data:</strong> We do not access or record audio.</li>
+            <li><strong>No Keystroke Logging:</strong> Penpal does not log keystrokes. Quick action buttons and pencil shortcuts (e.g., Undo, Eraser) only trigger specific mapped commands on your paired Mac.</li>
+            <li><strong>No Analytics or Telemetry:</strong> We do not include third-party analytics SDKs (such as Google Analytics, Firebase, Mixpanel, or Flurry). No telemetry is sent to us or any third party.</li>
+            <li><strong>No Advertising or Tracking:</strong> Penpal contains zero ads, zero ad-network SDKs, and does not request or track Apple's Identifier for Advertisers (IDFA).</li>
+          </ul>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="legal-section">
+          <h2>2. Data Handled Locally on Your Devices</h2>
+          <p>
+            To deliver sub-3ms digitizer responsiveness, Penpal processes raw input signals locally in real-time:
+          </p>
+          <ul>
+            <li>
+              <strong>Real-Time Stylus Packets:</strong> When using an Apple Pencil, the iPad app samples input at 240Hz (X/Y coordinates normalized to 0.0–1.0, 16-bit pressure 0–65535, tilt altitude and azimuth angles, button flags, and timestamps). These binary packets (40 bytes each) are streamed directly across the local socket buffer to the Penpal companion app on your Mac.
+            </li>
+            <li>
+              <strong>Ephemeral In-Memory Processing:</strong> Input packets are converted into native macOS <code>CGEvent</code> tablet point events in real time. They are never written to disk, logged to permanent storage, or cached beyond the instantaneous socket ring buffer.
+            </li>
+            <li>
+              <strong>Local App Preferences:</strong> Non-sensitive UI preferences (such as canvas theme selection, corner crop marks toggle, display aspect ratio mapping, and dock positioning) are saved locally on your device via standard <code>UserDefaults</code>. This data never leaves your device.
+            </li>
+          </ul>
+
+          <table class="legal-table">
+            <thead>
+              <tr>
+                <th>Data Category</th>
+                <th>Storage Location</th>
+                <th>Retention</th>
+                <th>Shared Externally?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Stylus Coordinates & Pressure</td>
+                <td>RAM (Ring Buffer Only)</td>
+                <td>&lt; 4 milliseconds</td>
+                <td>No (Local device only)</td>
+              </tr>
+              <tr>
+                <td>Multi-touch Gestures</td>
+                <td>RAM (Ring Buffer Only)</td>
+                <td>Ephemeral</td>
+                <td>No (Local device only)</td>
+              </tr>
+              <tr>
+                <td>UI Preferences (Theme, Dock)</td>
+                <td>Local <code>UserDefaults</code></td>
+                <td>Until app uninstalled</td>
+                <td>No (On-device only)</td>
+              </tr>
+              <tr>
+                <td>User Identity & Analytics</td>
+                <td>None</td>
+                <td>None</td>
+                <td>No</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="legal-section">
+          <h2>3. Network Communications & USB Bridge</h2>
+          <p>
+            Penpal communicates between your iPad and your Mac using local protocols:
+          </p>
+          <ul>
+            <li>
+              <strong>Physical USB (usbmuxd):</strong> By default, the app uses a direct physical Lightning or USB-C cable connected to your Mac via Apple's native <code>usbmuxd</code> protocol on local port <code>8124</code>. All traffic is confined to the physical wire between your two devices.
+            </li>
+            <li>
+              <strong>Local Network / Wi-Fi:</strong> If configured over local Wi-Fi or Apple Wireless Direct Link (AWDL), communication is strictly point-to-point across your local subnet. Penpal never connects to external servers, cloud proxies, or remote relays.
+            </li>
+          </ul>
+          <div class="highlight-box">
+            <p>
+              <strong>Zero Cloud Dependency:</strong> Penpal works completely offline without an active internet connection. You can disconnect your router or turn off internet access and Penpal will function with full capability.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="legal-section">
+          <h2>4. Third-Party Libraries and SDKs</h2>
+          <p>
+            Penpal does not bundle any closed-source third-party tracking, profiling, or advertising libraries. All core logic is written in native Swift using Apple system frameworks (UIKit, SwiftUI, CoreGraphics, IOKit, Network).
+          </p>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="legal-section">
+          <h2>5. Children's Privacy (COPPA & GDPR-K)</h2>
+          <p>
+            Penpal does not knowingly collect or solicit any personal information from children under the age of 13 (or under the applicable age in your jurisdiction). Because our software collects no personal information whatsoever, it is safe for users of all ages.
+          </p>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="legal-section">
+          <h2>6. Compliance with Global Privacy Laws (GDPR, CCPA/CPRA)</h2>
+          <p>
+            Under the European General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA):
+          </p>
+          <ul>
+            <li>We do not act as a data controller or data processor of personal information because zero personal data is gathered.</li>
+            <li>We do not "sell" or "share" personal information under CCPA/CPRA definitions.</li>
+            <li>Because no personal data is collected or stored, requests for data access, porting, or deletion are inherently satisfied by design (zero records exist).</li>
+          </ul>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="legal-section">
+          <h2>7. Architecture & Privacy Verification</h2>
+          <p>
+            Penpal is engineered to operate strictly offline. You can verify through standard system inspection tools (such as macOS Network Monitor, Little Snitch, or Wireshark) that no telemetry, background pings, or analytics packets are ever dispatched from either the iOS application or the macOS companion.
+          </p>
+        </section>
+
+        <!-- Section 8 -->
+        <section class="legal-section">
+          <h2>8. Changes to This Policy</h2>
+          <p>
+            If we update or modify this Privacy Policy, the revised version will be posted directly to this URL with an updated revision date. Any changes will continue to adhere to our core principle of preserving zero user data collection.
+          </p>
+        </section>
+
+        <!-- Section 9 -->
+        <section class="legal-section">
+          <h2>9. Contact Us</h2>
+          <p>
+            If you have questions or feedback regarding this Privacy Policy or Penpal's data handling practices, please contact us:
+          </p>
+          <p>
+            <strong>Support & Feedback:</strong> <a href="https://github.com/Renoceros/Penpal/issues" target="_blank" rel="noopener" style="color: var(--accent-cyan);">https://github.com/Renoceros/Penpal/issues</a><br>
+            <strong>Maintainer:</strong> Penpal Development Team
+          </p>
+        </section>
+
+      </article>
+
+      <div class="text-center" style="margin-top: 30px;">
+        <a href="terms.html" class="btn btn-secondary btn-md">Read Terms of Service →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <div class="nav-brand">
+          <span class="brand-icon">🖊️</span>
+          <span class="brand-name">Penpal</span>
+        </div>
+        <p class="footer-desc">
+          Ultra-low latency, zero-video graphics tablet digitizer for macOS creative professionals. Raw 240Hz ProMotion input over physical wire.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#how-it-works">Architecture</a></li>
+          <li><a href="index.html#simulator">Live Demo</a></li>
+          <li><a href="index.html#install">Installation Guide</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Documentation</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/Renoceros/Penpal/blob/main/README.md" target="_blank" rel="noopener">README.md</a></li>
+          <li><a href="https://github.com/Renoceros/Penpal/blob/main/documentation/decisions.json" target="_blank" rel="noopener">Architecture Decisions (ADRs)</a></li>
+          <li><a href="https://github.com/Renoceros/Penpal/blob/main/documentation/gestures.json" target="_blank" rel="noopener">Gestures & Palm Specs</a></li>
+          <li><a href="https://github.com/Renoceros/Penpal/blob/main/documentation/changelog.json" target="_blank" rel="noopener">Changelog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html" style="color: var(--accent-cyan); font-weight: 600;">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container text-center">
+        <p>© 2026 Penpal. All rights reserved. Apple, iPad, Apple Pencil, and macOS are trademarks of Apple Inc.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

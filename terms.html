@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Penpal</title>
+  <meta name="description" content="Penpal Terms of Service: Software license terms, usage guidelines, warranty disclaimers, and system permissions.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖊️</text></svg>">
+</head>
+<body class="theme-pitch-black">
+
+  <!-- Background Ambience Glow -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <span class="brand-icon">🖊️</span>
+        <span class="brand-name">Penpal</span>
+        <span class="brand-badge">Legal</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how-it-works">Architecture</a>
+        <a href="index.html#simulator">Live Demo</a>
+        <a href="index.html#install">Installation</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="https://github.com/Renoceros/Penpal" class="btn btn-secondary btn-sm" target="_blank" rel="noopener">
+          <svg class="icon-github" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <a href="index.html" class="btn btn-primary btn-sm">Back to Home</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="legal-main">
+    <div class="legal-container">
+      
+      <header class="legal-header">
+        <div class="legal-meta">
+          <span class="legal-tag">Terms of Service</span>
+          <span class="legal-date">Last Updated: September 14, 2026</span>
+        </div>
+        <h1 class="legal-title">Penpal Terms and Conditions</h1>
+        <p class="legal-summary">
+          Please review these Terms of Service before using Penpal. Penpal is specialized digitizer software to enable high-performance Apple Pencil graphics tablet capabilities on macOS.
+        </p>
+      </header>
+
+      <article class="legal-card">
+        
+        <!-- Summary Callout -->
+        <div class="highlight-box">
+          <p>
+            <strong>Key Summary:</strong> You are free to use Penpal for personal, artistic, educational, and commercial creative workflows. The software is provided "as is", and you control the permissions granted on your Mac.
+          </p>
+        </div>
+
+        <!-- Section 1 -->
+        <section class="legal-section">
+          <h2>1. Agreement to Terms</h2>
+          <p>
+            By downloading, compiling, installing, accessing, or using the Penpal iOS application, the Penpal macOS companion application, or associated PenpalKit libraries (collectively referred to as "the Service" or "the Software"), you agree to be bound by these Terms of Service.
+          </p>
+          <p>
+            If you do not agree with any part of these terms, do not install or use the software.
+          </p>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="legal-section">
+          <h2>2. Software License & Permitted Use</h2>
+          <p>
+            Subject to your compliance with these Terms, you are granted a personal, non-exclusive, non-transferable, revocable license to install and use Penpal on personal Apple iPad and Mac devices for your personal, creative, and commercial artistic workflows.
+          </p>
+          <p>
+            You agree not to modify, reverse-engineer, decompile, disassemble, or extract source code from distributed application binaries, except to the extent such restrictions are prohibited by applicable law.
+          </p>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="legal-section">
+          <h2>3. Operating System Permissions & Accessibility</h2>
+          <p>
+            To perform its function as a graphics tablet digitizer, Penpal requires specific system access on macOS:
+          </p>
+          <ul>
+            <li>
+              <strong>macOS Accessibility & Input Monitoring:</strong> The Penpal macOS companion application requires Accessibility API authorization to inject synthesized stylus tablet events (<code>kCGEventMouseSubtypeTabletPoint</code>), scaled 16-bit pressure values, tilt angles, and smooth trackpad gestures into target applications (such as Photoshop, Clip Studio Paint, Blender, or Krita).
+            </li>
+            <li>
+              <strong>Local Network / USB Bridge:</strong> Penpal communicates between iPad and Mac using Apple's local <code>usbmuxd</code> daemon or local subnet connections. You are responsible for ensuring physical USB cables and local network environments meet your security requirements.
+            </li>
+            <li>
+              <strong>Revocation of Permissions:</strong> You retain complete control over these permissions and may revoke them at any time via <em>macOS System Settings &gt; Privacy &amp; Security &gt; Accessibility</em>.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="legal-section">
+          <h2>4. Disclaimer of Warranties</h2>
+          <p>
+            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NONINFRINGEMENT.
+          </p>
+          <p>
+            IN NO EVENT SHALL THE AUTHORS, MAINTAINERS, OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+          </p>
+          <p>
+            We do not warrant that:
+          </p>
+          <ul>
+            <li>The software will operate without interruption, lag, or latency under all hardware configurations.</li>
+            <li>The software is completely free of software bugs, packet drops, or input glitches.</li>
+            <li>The software will remain compatible with future updates of iPadOS or macOS.</li>
+          </ul>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="legal-section">
+          <h2>5. Limitation of Liability</h2>
+          <p>
+            To the maximum extent permitted by applicable law, in no event shall the Penpal contributors, maintainers, or distributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services, loss of use, data, or profits, business interruption, or canvas/artwork corruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software.
+          </p>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="legal-section">
+          <h2>6. Third-Party Trademarks & Creative Software</h2>
+          <p>
+            All trademarks, product names, logos, and brand names mentioned on this site or within the software are the property of their respective owners:
+          </p>
+          <ul>
+            <li><strong>Apple Inc.:</strong> Apple, iPad, Apple Pencil, iPadOS, macOS, TestFlight, App Store, and ProMotion are registered trademarks of Apple Inc.</li>
+            <li><strong>Adobe Inc.:</strong> Adobe and Photoshop are registered trademarks of Adobe Systems Incorporated.</li>
+            <li><strong>Celsys:</strong> Clip Studio Paint is a registered trademark of Celsys, Inc.</li>
+            <li><strong>Blender Foundation:</strong> Blender is a registered trademark of the Blender Foundation.</li>
+            <li><strong>Krita:</strong> Krita is a trademark of the Stichting Krita Foundation.</li>
+          </ul>
+          <p>
+            The use of these trademarked names is purely for identification, reference, and technical interoperability purposes, and does not imply any affiliation, sponsorship, or endorsement by those respective entities.
+          </p>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="legal-section">
+          <h2>7. Acceptable Use</h2>
+          <p>
+            You agree to use Penpal in accordance with all applicable local, national, and international laws. You agree not to use the software to maliciously inject rogue input events, interfere with unauthorized computer systems, or circumvent system security policies.
+          </p>
+        </section>
+
+        <!-- Section 8 -->
+        <section class="legal-section">
+          <h2>8. Termination</h2>
+          <p>
+            You may terminate this agreement at any time by ceasing all use of Penpal and uninstalling or deleting the application and companion binaries from your devices.
+          </p>
+        </section>
+
+        <!-- Section 9 -->
+        <section class="legal-section">
+          <h2>9. Modifications to Terms</h2>
+          <p>
+            We reserve the right to modify or replace these Terms of Service at our sole discretion. Any changes will be published directly to this page with an updated timestamp. Your continued use of Penpal after any changes signifies your acceptance of the updated terms.
+          </p>
+        </section>
+
+        <!-- Section 10 -->
+        <section class="legal-section">
+          <h2>10. Inquiries and Support</h2>
+          <p>
+            For questions regarding these Terms and Conditions or to report technical issues, please open an issue in the official project repository:
+          </p>
+          <p>
+            <strong>Project Repository:</strong> <a href="https://github.com/Renoceros/Penpal/issues" target="_blank" rel="noopener" style="color: var(--accent-cyan);">https://github.com/Renoceros/Penpal/issues</a>
+          </p>
+        </section>
+
+      </article>
+
+      <div class="text-center" style="margin-top: 30px;">
+        <a href="privacy.html" class="btn btn-secondary btn-md">Read Privacy Policy →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <div class="nav-brand">
+          <span class="brand-icon">🖊️</span>
+          <span class="brand-name">Penpal</span>
+        </div>
+        <p class="footer-desc">
+          Ultra-low latency, zero-video graphics tablet digitizer for macOS creative professionals. Raw 240Hz ProMotion input over physical wire.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#how-it-works">Architecture</a></li>
+          <li><a href="index.html#simulator">Live Demo</a></li>
+          <li><a href="index.html#install">Installation Guide</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Documentation</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/Renoceros/Penpal/blob/main/README.md" target="_blank" rel="noopener">README.md</a></li>
+          <li><a href="https://github.com/Renoceros/Penpal/blob/main/documentation/decisions.json" target="_blank" rel="noopener">Architecture Decisions (ADRs)</a></li>
+          <li><a href="https://github.com/Renoceros/Penpal/blob/main/documentation/gestures.json" target="_blank" rel="noopener">Gestures & Palm Specs</a></li>
+          <li><a href="https://github.com/Renoceros/Penpal/blob/main/documentation/changelog.json" target="_blank" rel="noopener">Changelog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html" style="color: var(--accent-cyan); font-weight: 600;">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container text-center">
+        <p>© 2026 Penpal. All rights reserved. Apple, iPad, Apple Pencil, and macOS are trademarks of Apple Inc.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

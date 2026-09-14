@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penpal — Ultra-Low Latency 240Hz iPad Graphics Tablet for Mac</title>
+  <meta name="description" content="Turn your iPad and Apple Pencil into a zero-latency, zero-video graphics tablet digitizer for macOS creative apps over physical USB. 240Hz ProMotion, 16-bit pressure, and sub-3ms response.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖊️</text></svg>">
+</head>
+<body class="theme-pitch-black">
+
+  <!-- Background Ambience Glow -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="nav-brand">
+        <span class="brand-icon">🖊️</span>
+        <span class="brand-name">Penpal</span>
+        <span class="brand-badge">v0.4.1</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">Architecture</a>
+        <a href="#simulator">Live Demo</a>
+        <a href="#install">Installation</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="https://github.com/Renoceros/Penpal" class="btn btn-secondary btn-sm" target="_blank" rel="noopener">
+          <svg class="icon-github" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <a href="#install" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Zero Video • 240Hz ProMotion • USB Digitizer
+          </div>
+          <h1 class="hero-title">
+            Turn your iPad into a <br>
+            <span class="gradient-text">zero-latency graphics tablet</span> for Mac.
+          </h1>
+          <p class="hero-subtitle">
+            No video streaming delay. No compression blur. Just raw 240Hz Apple Pencil pressure, tilt, and multi-touch trackpad navigation piped straight to Photoshop, Clip Studio Paint, and Blender over a physical USB cable.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#install" class="btn btn-primary btn-lg">
+              <span>Install Guide</span>
+              <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+            <a href="#simulator" class="btn btn-secondary btn-lg">
+              <span>Try Live Simulator</span>
+            </a>
+          </div>
+
+          <!-- Quick Metrics -->
+          <div class="metrics-strip">
+            <div class="metric-card">
+              <span class="metric-value">&lt; 3ms</span>
+              <span class="metric-label">End-to-End Latency</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">240Hz</span>
+              <span class="metric-label">Coalesced Sampling</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">65,536</span>
+              <span class="metric-label">16-bit Pressure Levels</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">0%</span>
+              <span class="metric-label">Video Stream Overhead</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Simulator Section -->
+    <section id="simulator" class="simulator-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Interactive Preview</span>
+          <h2 class="section-title">Experience the Penpal Digitizer Canvas</h2>
+          <p class="section-subtitle">
+            Draw on the simulated iPad surface below. Test pressure variation, quick action dock shortcuts, themes, and observe real-time 40-byte binary packet telemetry.
+          </p>
+        </div>
+
+        <div class="simulator-wrapper">
+          <!-- Virtual iPad Tablet -->
+          <div class="ipad-frame">
+            <div class="ipad-camera-dot"></div>
+            
+            <div id="sim-canvas-container" class="sim-canvas-surface theme-pitch-black">
+              <!-- Corner Aspect Ratio Tick Marks -->
+              <div class="corner-mark top-left"></div>
+              <div class="corner-mark top-right"></div>
+              <div class="corner-mark bottom-left"></div>
+              <div class="corner-mark bottom-right"></div>
+
+              <!-- HTML5 Drawing Canvas -->
+              <canvas id="simCanvas" width="760" height="500"></canvas>
+
+              <!-- Floating Quick Action Dock -->
+              <div id="simDock" class="sim-dock position-right">
+                <button id="btnUndo" class="dock-btn" title="Undo (Cmd+Z)">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 10h10a5 5 0 0 1 5 5v2a5 5 0 0 1-5 5H6"/>
+                    <polyline points="7 6 3 10 7 14"/>
+                  </svg>
+                  <span>Undo</span>
+                </button>
+                <button id="btnRedo" class="dock-btn" title="Redo (Cmd+Shift+Z)">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10H11a5 5 0 0 0-5 5v2a5 5 0 0 0 5 5h7"/>
+                    <polyline points="17 6 21 10 17 14"/>
+                  </svg>
+                  <span>Redo</span>
+                </button>
+                <button id="btnEraser" class="dock-btn" title="Toggle Eraser (E)">
+                  <svg id="eraserIcon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13l-5 5m-2-12l-7 7a2.8 2.8 0 0 0 0 4l4 4a2.8 2.8 0 0 0 4 0l7-7a2.8 2.8 0 0 0 0-4l-4-4a2.8 2.8 0 0 0-4 0z"/>
+                    <path d="M18 13l3.5-3.5a2.1 2.1 0 0 0 0-3l-2-2a2.1 2.1 0 0 0-3 0L13 8"/>
+                  </svg>
+                  <span id="eraserLabel">Eraser</span>
+                </button>
+                <button id="btnHand" class="dock-btn" title="Hand Tool - Hold to Pan Canvas (Space)">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 11V6a2 2 0 0 0-4 0v5"/>
+                    <path d="M14 10V4a2 2 0 0 0-4 0v7"/>
+                    <path d="M10 10.5V6a2 2 0 0 0-4 0v8"/>
+                    <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/>
+                  </svg>
+                  <span>Hand</span>
+                </button>
+                <div class="dock-divider"></div>
+                <button id="btnThemeCycle" class="dock-btn" title="Cycle Canvas Theme">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                  </svg>
+                  <span>Theme</span>
+                </button>
+                <button id="btnClear" class="dock-btn" title="Clear Canvas">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="3 6 5 6 21 6"></polyline>
+                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Interaction Hint -->
+              <div id="simHint" class="canvas-overlay-hint">
+                <span>Click, drag, or touch to simulate 240Hz Apple Pencil strokes</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Telemetry HUD Sidecar -->
+          <div class="simulator-telemetry">
+            <div class="telemetry-card">
+              <div class="telemetry-header">
+                <span class="telemetry-title">Wire Protocol Stream (Port 8124)</span>
+                <span class="live-indicator"><span class="pulse-dot"></span> LIVE 240Hz</span>
+              </div>
+
+              <!-- Interactive Controls -->
+              <div class="sim-controls">
+                <div class="control-row">
+                  <label for="pressureSlider">Simulated Pressure</label>
+                  <input type="range" id="pressureSlider" min="0.05" max="1.0" step="0.01" value="0.65">
+                  <span id="pressureValue" class="control-val">65%</span>
+                </div>
+                <div class="control-row">
+                  <label for="themeSelect">Canvas Background</label>
+                  <select id="themeSelect">
+                    <option value="theme-pitch-black">Studio Pitch Black</option>
+                    <option value="theme-carbon-slate">Carbon Slate</option>
+                    <option value="theme-graphite">Graphite Grey</option>
+                    <option value="theme-parchment">Warm Parchment</option>
+                    <option value="theme-blueprint">Drafting Blueprint</option>
+                  </select>
+                </div>
+                <div class="control-row">
+                  <label for="dockPosSelect">Dock Handedness</label>
+                  <select id="dockPosSelect">
+                    <option value="position-right">Right-Handed (Dock on Right)</option>
+                    <option value="position-left">Left-Handed (Dock on Left)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Live Packet Inspection -->
+              <div class="packet-inspector">
+                <div class="inspector-title">Active 40-Byte StylusPacket</div>
+                <div class="packet-grid">
+                  <div class="pkt-item"><span class="k">Magic:</span><span class="v" id="pktMagic">0x504E ('PN')</span></div>
+                  <div class="pkt-item"><span class="k">Opcode:</span><span class="v" id="pktOpcode">0x01 (Stylus)</span></div>
+                  <div class="pkt-item"><span class="k">Sequence:</span><span class="v" id="pktSeq">#000000</span></div>
+                  <div class="pkt-item"><span class="k">Phase:</span><span class="v" id="pktPhase">Hover (0)</span></div>
+                  <div class="pkt-item"><span class="k">Norm X / Y:</span><span class="v" id="pktCoords">0.500, 0.500</span></div>
+                  <div class="pkt-item"><span class="k">Pressure:</span><span class="v highlight" id="pktPressure">0.000 (0 / 65535)</span></div>
+                  <div class="pkt-item"><span class="k">Cartesian Tilt:</span><span class="v" id="pktTilt">X: 0.0° Y: 0.0°</span></div>
+                  <div class="pkt-item"><span class="k">Latency:</span><span class="v green" id="pktLatency">&lt; 1.8 ms</span></div>
+                </div>
+
+                <div class="inspector-title mt-3">Raw Frame Hex Buffer (40 Bytes)</div>
+                <pre class="hex-dump" id="pktHex">50 4e 01 01 00 00 00 00 41 d8 f3 01 b2 44 91 22 3f 00 00 00 3f 00 00 00 3f 26 66 66 00 00 00 00 00 00 00 00 01 00 00 00</pre>
+              </div>
+
+              <!-- Last Action Banner -->
+              <div class="action-status-bar" id="actionStatusBar">
+                <span class="status-badge">READY</span> Connected via simulated usbmuxd socket.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section class="comparison-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Zero Video Architecture</span>
+          <h2 class="section-title">Why Penpal Beats Screen-Mirroring</h2>
+          <p class="section-subtitle">
+            Traditional tools force high-resolution video streams across Wi-Fi or USB. Penpal eliminates video entirely.
+          </p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature / Metric</th>
+                <th class="col-highlight">Penpal (Zero-Video)</th>
+                <th>Apple Sidecar</th>
+                <th>Astropad Studio</th>
+                <th>Wacom Intuos Pro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>End-to-End Latency</strong></td>
+                <td class="col-highlight text-green"><strong>&lt; 3 ms</strong></td>
+                <td>~25–40 ms</td>
+                <td>~20–35 ms</td>
+                <td>~4–8 ms</td>
+              </tr>
+              <tr>
+                <td><strong>Display Strategy</strong></td>
+                <td class="col-highlight"><strong>Zero Video (Pure Digitizer)</strong></td>
+                <td>H.264/HEVC Video Stream</td>
+                <td>LIQUID Video Stream</td>
+                <td>No Screen (Opaque Surface)</td>
+              </tr>
+              <tr>
+                <td><strong>Sampling Rate</strong></td>
+                <td class="col-highlight text-green"><strong>240 Hz Coalesced</strong></td>
+                <td>60–120 Hz</td>
+                <td>60–120 Hz</td>
+                <td>200 Hz</td>
+              </tr>
+              <tr>
+                <td><strong>Pressure Resolution</strong></td>
+                <td class="col-highlight"><strong>65,536 Levels (16-bit)</strong></td>
+                <td>OS standard</td>
+                <td>Custom software curve</td>
+                <td>8,192 Levels</td>
+              </tr>
+              <tr>
+                <td><strong>iPad Thermals & Battery</strong></td>
+                <td class="col-highlight text-green"><strong>Runs Ice Cold (Days of battery)</strong></td>
+                <td>High drain & thermal throttle</td>
+                <td>High drain & heat</td>
+                <td>Battery powered</td>
+              </tr>
+              <tr>
+                <td><strong>Palm Rejection</strong></td>
+                <td class="col-highlight"><strong>Hardware-Enforced Stylus Lock</strong></td>
+                <td>Software heuristic</td>
+                <td>Software heuristic</td>
+                <td>Physical bezel</td>
+              </tr>
+              <tr>
+                <td><strong>Physical Connection</strong></td>
+                <td class="col-highlight"><strong>USB (`/var/run/usbmuxd`)</strong></td>
+                <td>Wi-Fi / USB</td>
+                <td>Wi-Fi / USB</td>
+                <td>USB / Bluetooth</td>
+              </tr>
+              <tr>
+                <td><strong>Pricing</strong></td>
+                <td class="col-highlight text-green"><strong>Free on TestFlight</strong></td>
+                <td>Bundled with macOS</td>
+                <td>$99/yr subscription</td>
+                <td>$379 hardware purchase</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Engineered for Pro Creative Workflow</span>
+          <h2 class="section-title">Built specifically for artists, animators, and sculptors</h2>
+          <p class="section-subtitle">
+            Every layer of Penpal was built from scratch in Swift 6 for zero latency, zero frame drops, and bulletproof stability.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Card 1 -->
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3 class="feature-title">240Hz Coalesced Touch Engine</h3>
+            <p class="feature-desc">
+              Bypasses standard UIKit event smoothing. Extracts Apple Pencil high-frequency sub-frame samples directly from <code>event.coalescedTouches</code> for glass-smooth curve interpolation without jagged edges.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3 class="feature-title">16-Bit CoreGraphics Tablet Injection</h3>
+            <p class="feature-desc">
+              Synthesizes true <code>kCGEventMouseSubtypeTabletPoint</code> events to <code>kCGHIDEventTap</code>. Maps altitude/azimuth spherical angles into Cartesian degrees for tilt shading in Photoshop and Blender.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-card">
+            <div class="feature-icon">🖐️</div>
+            <h3 class="feature-title">Trackpad Pan, Zoom & Rotate</h3>
+            <p class="feature-desc">
+              Two fingers instantly navigate your desktop canvas. Smooth continuous pixel scroll (<code>CGEventCreateScrollWheelEvent2</code>) and trackpad pinch magnification keep your flow uninterrupted.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <h3 class="feature-title">Hardware-Enforced Palm Rejection</h3>
+            <p class="feature-desc">
+              Single-finger touches are 100% inert. While your Apple Pencil is in hover or drawing contact, finger recognizers are completely suppressed at the hardware level—zero stray marks or cursor jumps.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="feature-card">
+            <div class="feature-icon">🎛️</div>
+            <h3 class="feature-title">Quick Action Dock & Studio Themes</h3>
+            <p class="feature-desc">
+              One-tap Undo (<code>Cmd+Z</code>), Redo (<code>Cmd+Shift+Z</code>), and Eraser (<code>E</code>) right at your fingertips. Switch between 5 OLED and paper canvas themes with left- or right-hand dock positioning.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="feature-card">
+            <div class="feature-icon">🦺</div>
+            <h3 class="feature-title">Emergency Disconnect Fail-Safe</h3>
+            <p class="feature-desc">
+              If your USB-C cable gets yanked out mid-stroke, Penpal immediately synthesizes an emergency <code>kCGEventLeftMouseUp</code>, completely preventing stuck mouse drag loops on your Mac desktop.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture & How It Works -->
+    <section id="how-it-works" class="arch-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">System Architecture</span>
+          <h2 class="section-title">How Penpal Achieves &lt; 3ms Latency</h2>
+          <p class="section-subtitle">
+            Zero third-party frameworks. Pure Swift from the iPad touch digitizer to the macOS HID event tap.
+          </p>
+        </div>
+
+        <div class="pipeline-diagram">
+          <div class="pipeline-step">
+            <div class="step-badge">1. Capture</div>
+            <div class="step-box">
+              <h4>iPad Pro Canvas</h4>
+              <p><code>UIResponder</code> collects 240Hz coalesced Pencil touches, pressure, altitude & azimuth angles.</p>
+            </div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step">
+            <div class="step-badge">2. Pack</div>
+            <div class="step-box">
+              <h4>40B Binary Frame</h4>
+              <p>Contiguous <code>@frozen BitwiseCopyable</code> packet with zero memory allocations or heap copying.</p>
+            </div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step">
+            <div class="step-badge">3. Transport</div>
+            <div class="step-box">
+              <h4>usbmuxd Socket</h4>
+              <p>Sub-millisecond USB domain socket bridge over <code>/var/run/usbmuxd</code> (Port 8124, <code>TCP_NODELAY</code>).</p>
+            </div>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step">
+            <div class="step-badge">4. Inject</div>
+            <div class="step-box">
+              <h4>macOS HID Tap</h4>
+              <p><code>EventInjector</code> maps 4:3 pillarbox coordinates & synthesizes native tablet events into Photoshop/CSP.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wire Protocol Comparison Box -->
+        <div class="protocol-card">
+          <div class="protocol-header">
+            <h3>Wire Protocol Memory Layout</h3>
+            <span class="protocol-tag">Zero Allocation • Fixed Stride</span>
+          </div>
+          <div class="protocol-body">
+            <div class="packet-schema">
+              <h4>StylusPacket (40 Bytes)</h4>
+              <div class="schema-row">
+                <span class="byte-range">00..01</span>
+                <span class="field-name">Magic (0x504E)</span>
+                <span class="field-desc">Sync header identifier</span>
+              </div>
+              <div class="schema-row">
+                <span class="byte-range">02..03</span>
+                <span class="field-name">Version & Opcode</span>
+                <span class="field-desc">v1.0 (0x01), Opcode 0x01 (Stylus)</span>
+              </div>
+              <div class="schema-row">
+                <span class="byte-range">04..07</span>
+                <span class="field-name">Sequence & Reserved</span>
+                <span class="field-desc">Drop/loss detection</span>
+              </div>
+              <div class="schema-row">
+                <span class="byte-range">08..15</span>
+                <span class="field-name">Timestamp (Double)</span>
+                <span class="field-desc">Mach continuous time</span>
+              </div>
+              <div class="schema-row">
+                <span class="byte-range">16..23</span>
+                <span class="field-name">Norm X & Y (Float32)</span>
+                <span class="field-desc">Normalized tablet coordinates (0.0–1.0)</span>
+              </div>
+              <div class="schema-row">
+                <span class="byte-range">24..27</span>
+                <span class="field-name">Pressure (Float32)</span>
+                <span class="field-desc">Continuous 0.0–1.0 (scales to 0–65535)</span>
+              </div>
+              <div class="schema-row">
+                <span class="byte-range">28..35</span>
+                <span class="field-name">Tilt X & Y (Float32)</span>
+                <span class="field-desc">Cartesian tilt angles (-60.0° to +60.0°)</span>
+              </div>
+              <div class="schema-row">
+                <span class="byte-range">36..39</span>
+                <span class="field-name">Phase & Padding</span>
+                <span class="field-desc">Hover / Began / Moved / Ended + 8B alignment</span>
+              </div>
+            </div>
+
+            <div class="packet-schema">
+              <h4>GesturePacket (24 Bytes)</h4>
+              <div class="schema-row">
+                <span class="byte-range">00..03</span>
+                <span class="field-name">Magic, Ver, Opcode</span>
+                <span class="field-desc">0x504E, v1, Opcode 0x02 (Gesture)</span>
+              </div>
+              <div class="schema-row">
+                <span class="byte-range">04..07</span>
+                <span class="field-name">Sequence & Reserved</span>
+                <span class="field-desc">Sequence counter</span>
+              </div>
+              <div class="schema-row">
+                <span class="byte-range">08..15</span>
+                <span class="field-name">Timestamp (Double)</span>
+                <span class="field-desc">Mach continuous time</span>
+              </div>
+              <div class="schema-row">
+                <span class="byte-range">16..19</span>
+                <span class="field-name">Delta X & Y (Int16)</span>
+                <span class="field-desc">Pixel scroll deltas (Continuous Pan)</span>
+              </div>
+              <div class="schema-row">
+                <span class="byte-range">20..23</span>
+                <span class="field-name">Scale & Rotation (Int16)</span>
+                <span class="field-desc">Pinch magnification & rotation angles</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Installation & Getting Started Section -->
+    <section id="install" class="install-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Quick Start</span>
+          <h2 class="section-title">How to Install and Use Penpal</h2>
+          <p class="section-subtitle">
+            Set up the macOS host daemon and deploy the iPad client app in just 5 minutes.
+          </p>
+        </div>
+
+        <div class="install-steps-container">
+          <!-- Step 1 -->
+          <div class="install-step-card">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h3>Clone Repository & Launch macOS Companion App</h3>
+              <p>PenpalKit builds with Swift 6 strict concurrency checking. Launch the native macOS companion monitor window (or headless daemon) via Swift Package Manager:</p>
+              <div class="code-block">
+                <div class="code-header">
+                  <span>Terminal (macOS)</span>
+                  <button class="copy-btn" data-copy="git clone https://github.com/Renoceros/Penpal.git && cd Penpal && swift run --package-path Packages/PenpalKit PenpalCompanion">Copy</button>
+                </div>
+                <pre><code><span class="cmd-prompt">$</span> git clone https://github.com/Renoceros/Penpal.git
+<span class="cmd-prompt">$</span> cd Penpal
+<span class="cmd-prompt">$</span> swift run --package-path Packages/PenpalKit PenpalCompanion</code></pre>
+              </div>
+              <p class="text-muted mt-2" style="font-size: 0.85rem;">Or run headless CLI daemon: <code>swift run --package-path Packages/PenpalKit PenpalHostSpike</code></p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="install-step-card">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h3>Grant macOS Accessibility Permissions</h3>
+              <p>CoreGraphics requires Accessibility authorization to inject tablet cursor and pressure events into third-party creative apps:</p>
+              <ol class="step-list">
+                <li>Open <strong>System Settings</strong> on your Mac.</li>
+                <li>Navigate to <strong>Privacy & Security → Accessibility</strong>.</li>
+                <li>Click the <strong>+</strong> button (or toggle on) and add <strong>Terminal</strong> (or your compiled host app binary).</li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="install-step-card">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h3>Deploy the iPad App via Xcode</h3>
+              <p>You can deploy Penpal onto your personal iPad using a standard free Apple Developer account:</p>
+              <div class="code-block">
+                <div class="code-header">
+                  <span>Terminal (macOS)</span>
+                  <button class="copy-btn" data-copy="open Penpal.xcodeproj">Copy</button>
+                </div>
+                <pre><code><span class="cmd-prompt">$</span> open Penpal.xcodeproj</code></pre>
+              </div>
+              <ol class="step-list mt-2">
+                <li>Plug your iPad into your Mac with a USB-C cable.</li>
+                <li>Select the <strong>Penpal</strong> scheme and your iPad in the device menu.</li>
+                <li>Under <strong>Signing & Capabilities</strong>, select your personal Team.</li>
+                <li>Press <strong>Cmd + R</strong> to build and run the app onto your iPad.</li>
+                <li><em>(First time only)</em> On your iPad, open <strong>Settings → General → VPN & Device Management</strong> and tap <strong>Trust</strong>.</li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="install-step-card">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h3>Plug In & Start Drawing!</h3>
+              <p>Keep your iPad connected via USB. Launch <strong>Penpal</strong> on your iPad and run the <strong>PenpalHost</strong> on your Mac:</p>
+              <ul class="step-checklist">
+                <li>✓ The host automatically connects to the iPad on port <code>8124</code> over <code>usbmuxd</code>.</li>
+                <li>✓ Open <strong>Photoshop</strong>, <strong>Clip Studio Paint</strong>, or <strong>Blender</strong>.</li>
+                <li>✓ Hover your Apple Pencil above the iPad to preview cursor position, and press down to paint with 16-bit pressure!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Everything you need to know about Penpal's design, compatibility, and performance.
+          </p>
+        </div>
+
+        <div class="faq-accordion">
+          <!-- Item 1 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Why doesn't Penpal show my Mac screen on the iPad?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Transmitting a 120Hz 4K screen image requires heavy video encoding (H.264/HEVC), network buffering, and GPU decoding on the iPad. This introduces <strong>25–60ms of visual lag</strong>, heats up your iPad, drains battery quickly, and causes pen strokes to feel disconnected from your hand.
+              </p>
+              <p class="mt-2">
+                By operating as a <strong>pure digitizer</strong> (identical to professional Wacom Intuos tablets), your iPad displays no video. You look at your calibrated desktop monitor while your hand glides smoothly over the iPad surface—giving you instant, sub-3ms tactile response without heat or battery degradation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does Penpal achieve &lt; 3ms latency compared to Sidecar (~30ms)?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Sidecar and Astropad must capture macOS desktop frames, encode them to video streams, packetize them, stream them over network layers, and wait for the iPad to decode and display each frame.
+              </p>
+              <p class="mt-2">
+                Penpal bypasses the entire video pipeline. It captures raw hardware touch coordinates at 240Hz, serializes them into tiny 40-byte binary packets, and pumps them over a raw USB Unix domain socket (<code>/var/run/usbmuxd</code>). Total serialization, USB transit, and event injection take less than 3 milliseconds.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Does pressure sensitivity and tilt work in Photoshop, Clip Studio Paint, and Blender?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                <strong>Yes, out of the box!</strong> Penpal synthesizes native <code>kCGEventMouseSubtypeTabletPoint</code> CoreGraphics events with 16-bit pressure (<code>0 to 65,535</code>) and sets <code>tabletEventPointButtons = 1</code>, which professional applications require to recognize tablet hardware.
+              </p>
+              <p class="mt-2">
+                In Photoshop, simply open the Brush Settings panel (<code>F5</code>), go to <strong>Shape Dynamics</strong>, and ensure <strong>Control</strong> is set to <strong>Pen Pressure</strong>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does palm rejection work if the screen doesn't show video?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Penpal uses a <strong>hardware-enforced priority lockout</strong>:
+              </p>
+              <ul class="step-list mt-2">
+                <li>Single-finger touches are 100% inert and never generate cursor clicks or strokes.</li>
+                <li>The moment your Apple Pencil hovers over the screen or makes contact (<code>pressure &gt; 0</code>), all multi-touch recognizers are completely disabled.</li>
+                <li>Resting your entire palm or side of your hand on the iPad screen will never cause accidental marks, tool switching, or cursor jumping.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What happens if my USB cable accidentally gets unplugged while drawing?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Penpal includes an automated fail-safe. If the USB socket experiences an unexpected EOF or disconnection while you are mid-stroke, <code>EventInjector</code> immediately synthesizes an emergency <code>kCGEventLeftMouseUp</code> event. This prevents your macOS desktop from getting stuck in mouse-drag mode.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do I need a paid Apple Developer account to install Penpal on my iPad?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                <strong>No.</strong> You can deploy the iPad app using a free personal Apple ID in Xcode. Free provisioning profiles allow you to test and use the app on your personal hardware for 7 days before needing to click "Build & Run" in Xcode again.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="cta-banner">
+      <div class="container text-center">
+        <h2 class="cta-title">Ready to upgrade your Mac creative setup?</h2>
+        <p class="cta-subtitle">
+          Turn your existing iPad into a professional digitizer without spending hundreds on dedicated hardware.
+        </p>
+        <div class="cta-buttons">
+          <a href="#install" class="btn btn-primary btn-lg">Get Started Now</a>
+          <a href="https://github.com/Renoceros/Penpal" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">
+            View Source on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <div class="nav-brand">
+          <span class="brand-icon">🖊️</span>
+          <span class="brand-name">Penpal</span>
+        </div>
+        <p class="footer-desc">
+          Ultra-low latency, zero-video graphics tablet digitizer for macOS creative professionals. Raw 240Hz ProMotion input over physical wire.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">Architecture</a></li>
+          <li><a href="#simulator">Live Demo</a></li>
+          <li><a href="#install">Installation Guide</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Documentation</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/Renoceros/Penpal/blob/main/README.md" target="_blank" rel="noopener">README.md</a></li>
+          <li><a href="https://github.com/Renoceros/Penpal/blob/main/documentation/decisions.json" target="_blank" rel="noopener">Architecture Decisions (ADRs)</a></li>
+          <li><a href="https://github.com/Renoceros/Penpal/blob/main/documentation/gestures.json" target="_blank" rel="noopener">Gestures & Palm Specs</a></li>
+          <li><a href="https://github.com/Renoceros/Penpal/blob/main/documentation/changelog.json" target="_blank" rel="noopener">Changelog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container text-center">
+        <p>© 2026 Penpal. All rights reserved. Apple, iPad, Apple Pencil, and macOS are trademarks of Apple Inc.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
