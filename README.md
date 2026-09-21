@@ -87,7 +87,10 @@ cd Penpal
 You have two ways to run the macOS host:
 
 #### Option A: Native GUI Companion App (Recommended)
-Launch the native macOS companion window with live 240Hz telemetry and connection status:
+Download the pre-compiled disk image from the documentation site:
+- **[Download PenpalCompanion.dmg (3.6 MB)](https://renoceros.github.io/Penpal.docs/downloads/PenpalCompanion.dmg)** (or drag from `downloads/PenpalCompanion.dmg`)
+
+Or launch directly from source with live 240Hz telemetry:
 
 ```bash
 swift run --package-path Packages/PenpalKit PenpalCompanion

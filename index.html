@@ -36,7 +36,10 @@
           </svg>
           <span>GitHub</span>
         </a>
-        <a href="#install" class="btn btn-primary btn-sm">Get Started</a>
+        <a href="downloads/PenpalCompanion.dmg" class="btn btn-primary btn-sm" download>
+          <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:4px;"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          <span>Download DMG</span>
+        </a>
       </div>
     </div>
   </header>
@@ -58,12 +61,12 @@
             No video streaming delay. No compression blur. Just raw 240Hz Apple Pencil pressure, tilt, and multi-touch trackpad navigation piped straight to Photoshop, Clip Studio Paint, and Blender over a physical USB cable.
           </p>
           <div class="hero-cta-group">
-            <a href="#install" class="btn btn-primary btn-lg">
-              <span>Install Guide</span>
-              <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            <a href="downloads/PenpalCompanion.dmg" class="btn btn-primary btn-lg" download>
+              <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              <span>Download for Mac (.dmg)</span>
             </a>
-            <a href="#simulator" class="btn btn-secondary btn-lg">
-              <span>Try Live Simulator</span>
+            <a href="#install" class="btn btn-secondary btn-lg">
+              <span>Install Guide</span>
             </a>
           </div>
 
@@ -532,8 +535,16 @@
           <div class="install-step-card">
             <div class="step-num">1</div>
             <div class="step-content">
-              <h3>Clone Repository & Launch macOS Companion App</h3>
-              <p>PenpalKit builds with Swift 6 strict concurrency checking. Launch the native macOS companion monitor window (or headless daemon) via Swift Package Manager:</p>
+              <h3>Download & Install macOS Companion App</h3>
+              <p>Download the pre-compiled native macOS companion disk image:</p>
+              <div style="margin: 14px 0;">
+                <a href="downloads/PenpalCompanion.dmg" class="btn btn-primary" download>
+                  <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:6px;"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                  <span>Download PenpalCompanion.dmg (3.6 MB)</span>
+                </a>
+              </div>
+              <p>Open the disk image and drag <strong>Penpal Companion</strong> to your <strong>Applications</strong> folder.</p>
+              <p class="text-muted mt-3" style="font-size: 0.85rem;">Or build directly from source using Swift Package Manager:</p>
               <div class="code-block">
                 <div class="code-header">
                   <span>Terminal (macOS)</span>
